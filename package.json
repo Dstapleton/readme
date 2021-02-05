@@ -1,0 +1,25 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Generate Profile and readme from user input",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dstapleton/readme-generator.git"
+  },
+  "keywords": [
+    "html",
+    "html profile",
+    "profile",
+    "readme"
+  ],
+  "author": "David Stapleton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dstapleton/readme-generator/issues"
+  },
+  "homepage": "https://github.com/Dstapleton/readme-generator#readme"
+}
