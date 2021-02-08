@@ -56,6 +56,25 @@ const promptUser = () =>{
             }
         },
         {
+            type:"confirm",
+            name:"confirmAbout",
+            message:'Would you like to enter some infomation about yourself for an "About" section?',  
+            default: true
+        },
+        {
+            type:"input",
+            name:"about",
+            message:'Provide some infomation about yourself',
+            when: ({confirmAbout}) => {
+                if (confirmAbout) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        },
+        {
             type:"input",
             name:"about",
             message:"Provide a bit about yourself"
@@ -74,8 +93,8 @@ Add a new project
     `);
     return inquirer.prompt([
         {
-            type: "input",
-            name: "name",
+            type:"input",
+            name:"name",
             message:"What is the name of your project",
             validate:nameInput => {
                 if (nameInput) {
@@ -88,9 +107,9 @@ Add a new project
             }
         },
         {
-            type: "input",
-            name: "description",
-            message: "Provide a discription of the project (Required)",
+            type:"input",
+            name:"description",
+            message:"Provide a discription of the project (Required)",
             validate:nameInput => {
                 if (nameInput) {
                     return true;
@@ -102,14 +121,14 @@ Add a new project
             }
         },
         {
-            type: "checkbox",
-            name: "languages",
-            message: "What did you build this project with? (Check all that apply)",
+            type:"checkbox",
+            name:"languages",
+            message:"What did you build this project with? (Check all that apply)",
             choices:['JavaScript', "HTML", "CSS", "ES6", "jQuery", "Boothstrap", "Node"]
         },
         {
-            type: "input",
-            name: "link",
+            type:"input",
+            name:"link",
             message:"Enter the GitHub link to your Project. (Required)",
             validate:nameInput => {
                 if (nameInput) {
@@ -122,15 +141,15 @@ Add a new project
             }
         },
         {
-            type: "confirm",
-            name: "feature",
+            type:"confirm",
+            name:"feature",
             message:"Would you like to feature this project?",
             default: false
 
         },
         {
-            type: "confirm",
-            name: "confirmAddProject",
+            type:"confirm",
+            name:"confirmAddProject",
             message:"Would you like to add another projects",
             default: false
 
